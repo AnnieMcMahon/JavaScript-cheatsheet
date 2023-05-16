@@ -1,0 +1,133 @@
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color:rgb(10, 10, 117);
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+header {
+  box-sizing: border-box;
+  background-color:rgb(102, 25, 102);
+  color: white;
+  height: 8rem;
+  width: 90%;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+h1 {
+  line-height: 4rem;
+}
+
+
+h2 {   /*  Hyperlinks */
+  font-size: 1.7rem;
+  color:rgb(10, 10, 117);
+  padding-top: 50px;
+  margin-top: -40px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+p { 
+  text-align: left;
+}
+
+button {
+  font-size: 1.2rem;
+  height: 50px;
+  width: 200px;
+  margin: 1px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: rgb(1, 29, 29);
+}
+
+#reset-all {
+  background-color: purple;
+}
+
+#reset-all:hover {
+  background-color: rgb(48, 1, 48)
+}
+
+#strings, #numbers, #arrays {
+  width: 70%;
+  margin: auto;
+}
+
+code {
+  background-color: rgb(207, 194, 194);
+  border: 0.5px solid rgb(167, 161, 161);
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 16px;
+}
+
+footer {
+  background-color:rgb(10, 10, 117);
+  color: white;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+#bored {
+  width: 300px;
+  height: auto;
+  float: right;
+}
+
+#bored:hover {
+  cursor: pointer;
+}
+

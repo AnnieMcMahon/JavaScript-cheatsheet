@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!--HTML5-->
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Annie McMahon" />
+  <meta name="description" content="website/project description" />
+  <link href="styles/style.css" type="text/css" rel="stylesheet">
+  <script src="script.js"></script>
+  <title>JavaScript Cheatsheet</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#images">Changing Images</a></li>
+      <li><a href="#style">Changing Style</a></li>
+      <li><a href="#strings">String Methods</a></li>
+      <li><a href="#numbers">Number Methods</a></li>
+      <li><a href="#arrays">Array Methods</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>JavaScript Cheatsheet</h1>
+  </header>
+
+  <main>
+    <div id="images">
+      <h2>Changing Images</h2>
+        <h3>Using JavaScript to change an image source</h3>
+        <h3>Example: <code>onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'"</code></h3>
+        <br /><br />
+        <button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
+        <img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+        <img id="bored" src="images/bored.jpg" title="Click if you are bored" onclick="boredom()" >
+        <hr />
+    </div>
+    <div id="style">
+      <h2>Changing Style</h2>
+      <h3 id="demo">Using JavaScript to style an HTML element</h3>
+      <h3>Example: <code>onclick="document.getElementById('demo').style.visibility='hidden'"</code></h3><br /><br />
+      <button type="button"
+        onclick="document.getElementById('demo').style.visibility='hidden'">visibility='hidden'</button>
+      <button type="button" onclick="document.getElementById('demo').style.display='none'">display='none'</button>
+      <button type="button" onclick="document.getElementById('demo').style.color='blue'">color='blue'</button>
+      <button type="button" onclick="document.getElementById('demo').style.fontWeight='bold'">fontWeight='bold'</button>
+      <br />
+      <button type="button"
+        onclick="document.getElementById('demo').style.visibility='visible'">visibility='visible'</button>
+      <button type="button" onclick="document.getElementById('demo').style.display='block'">display='block'</button>
+      <button type="button" onclick="document.getElementById('demo').style.color='black'">color='black'</button>
+      <button type="button"
+        onclick="document.getElementById('demo').style.fontWeight='normal'">font-weight='normal'</button>
+      <br />
+      <button id="reset-all" type="button" onclick="resetAll()">RESET</button>
+      <hr />
+    </div>
+    <div id="strings">
+      <h2>String Methods</h2>
+      <h3>Note: Strings are immutable. All string methods return a new string.</h3>
+      <h3>Examples: <code>l = myString.length();</code> <code>s = myString.slice(0, 5);</code>
+        <code>user = inputData.toUpperCase();</code>
+      </h3>
+      <p><code>.length()</code> returns the length of a string.</p>
+      <p><code>.slice(start, end)</code> returns a part of a string.</p>
+      <p><code>.replace("text", "replacement")</code> replaces the first found value with another value.</p>
+      <p><code>.toUpperCase()</code> converts a string to upper case.</p>
+      <p><code>.toLowerCase()</code> converts a string to lower case.</p>
+      <p><code>.concat("string1", " ", "string2")</code> concatenates a string to another string (or set of strings).
+      </p>
+      <p><code>.trim()</code> removes whitespace from the beginning and the end of a string.</p>
+      <p><code>.trimStart()</code> and <code>.trimEnd()</code> can also be used.</p>
+      <p><code>.charAt(index)</code> returns the character at a specified index</p>
+      <p><code>.split(" ")</code> converts the parts separated by the specified character in a string into an array.</p>
+      <h4>String Search Methods</h4>
+      <p>Replace "x" with the value to search for. If not found, the index returned will be -1.</p>
+      <p><code>.indexOf("x")</code>, <code>.lastIndexOf("x")</code>, and <code>.search("x")</code> return the index of the occurrence of a string.</code></p>
+      <p><code>.match("x")</code> returns an array of the matching results.</p>
+      <p><code>.includes("x")</code> returns true if it contains the specified string.</p>
+      <p><code>.startsWith("x")</code> returns true if it begins with the specified string.</p>
+      <p><code>.endsWith("x")</code> returns true if it ends with the specified string.</p>
+      <hr />
+    </div>
+
+    <div id="numbers">
+      <h2>Number Methods</h2>
+      <h3>Note: if the argument is not a number, NaN (not a number) will be returned.</h3>
+      <h3>Examples: <code>n = myNumber.toString();</code> <code>dob = Number(userInput)</code>
+        <code>avg = parseFloat("3.15 average");</code>
+      </h3>
+      <p><code>.toString()</code> returns a number as a string.</p>
+      <p><code>Number(var)</code> converts a variable or a date to a number.</p>
+      <p><code>parseInt(string)</code> parses a string and returns the first integer.</p>
+      <p><code>parseFloat(string)</code> parses a string and returns the first number.</p>
+      <p><code>Number.isInteger(num)</code> returns true if the argument is an integer.</p>
+      <hr />
+    </div>
+    <div id="arrays">
+      <h2>Array Methods</h2>
+      <h4>Array Methods tbat converts an Array to a String (or vice-versa)</h4>
+      <p><code>.toString()</code> converts the array to a string.</p>
+      <p><code>.join(" ")</code> converts the array to a string separated by the character(s) specified.</p>
+      <p><code>Array.from("string")</code> creates an array from a string.</p>
+
+      <h4>Array Methods that Mutate the Array</h4>      
+      <p><code>.pop()</code> removes the last item and returns that item.</p>
+      <p><code>.push()</code> adds an item at the end and returns the new length.</p>
+      <p><code>.shift()</code> removes the first item and returns that item.</p>
+      <p><code>.unshift()</code> adds an item at the beginning and returns the new length.</p>
+      <p><code>.sort()</code> sorts alphabetically.</p>
+      <p><code>.reverse()</code> reverses the elements.</p>
+      <p><code>.splice(start, removed, newElements)</code> adds and/or remove elements and returns the removed elements.</p>
+
+      <h4>Array Methods that Return a New Array</h4>
+      <p><code>.slice(start, end)</code> creates a new array with removed elements.</p>
+      <p><code>.concat(array2)</code> concatenates an array to another array and returns the result.</p>
+      <p><code>.flat()</code> Combines all the arrays within the array into one single array.</p>
+      <p><code>.map(myFunction)</code> creates a new array by performing a function on each element.</p>
+      <p><code>.filter(myFunction)</code> creates a new array with elements that pass a test.</p>
+
+      <h4>Methods to Search an Array</h4>
+      <p><code>.indexOf(elementToFind)</code> returns the index of an element.</p>
+      <p><code>.includes(elementToFind)</code> returns true if the element is present.</p>
+      <p><code>.find(myFunction)</code> returns the value of the first element that passes the test.</p>
+      <p><code>.findIndex(myFunction)</code> returns the index of the first element that passes the test.</p>
+
+      <h4>Other Array Methods</h4>
+      <p><code>.length()</code> returns the size of the array.</p>
+      <p><code>.forEach(myFunction)</code> calls a function for each element.</p>
+      <p><code>.reduce(myFunction)</code> runs a function on each element to produce a single value.</p>
+      <p><code>.every(myFunction)</code> returns true if all values pass the test.</p>
+      <p><code>.some(myFunction)</code> returns true if some of the values pass the test.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <h5>Annie McMahon 2023</h5>
+  </footer>
+
+</body>
+
+</html>
