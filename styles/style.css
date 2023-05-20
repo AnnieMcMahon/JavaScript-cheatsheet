@@ -47,7 +47,7 @@ header {
   background-color:rgb(102, 25, 102);
   color: white;
   height: 8rem;
-  width: 90%;
+  width: 100%;
   margin: auto;
   padding-top: 2rem;
 }
@@ -129,5 +129,9 @@ footer {
 
 #bored:hover {
   cursor: pointer;
+}
+
+.example {
+  background-color:rgb(168, 160, 207)
 }
 
