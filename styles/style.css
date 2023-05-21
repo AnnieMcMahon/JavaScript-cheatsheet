@@ -101,7 +101,7 @@ button:hover {
   background-color: rgb(48, 1, 48)
 }
 
-#strings, #numbers, #arrays {
+.section {
   width: 70%;
   margin: auto;
 }
@@ -132,6 +132,6 @@ footer {
 }
 
 .example {
-  background-color:rgb(168, 160, 207)
+  background-color:rgb(249, 228, 123)
 }
 

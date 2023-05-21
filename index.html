@@ -17,7 +17,9 @@
       <li><a href="#style">Changing Style</a></li>
       <li><a href="#strings">String Methods</a></li>
       <li><a href="#numbers">Number Methods</a></li>
+      <li><a href="#loops">Loops</a></li>
       <li><a href="#arrays">Array Methods</a></li>
+      <li><a href="#objects">Loops</a></li>
     </ul>
   </nav>
   <header>
@@ -25,7 +27,7 @@
   </header>
 
   <main>
-    <div id="images">
+    <div id="images" class="section">
       <h2>Changing Images</h2>
         <h3>Using JavaScript to change an image source</h3>
         <h3>Example: <code class="example">onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'"</code></h3>
@@ -56,7 +58,7 @@
       <button id="reset-all" type="button" onclick="resetAll()">RESET</button>
       <hr />
     </div>
-    <div id="strings">
+    <div id="strings" class="section">
       <h2>String Methods</h2>
       <h3>Note: Strings are immutable. All string methods return a new string.</h3>
       <h3>Examples: <code class="example">l = myString.length();</code> <code class="example">s = myString.slice(0, 5);</code>
@@ -83,7 +85,7 @@
       <hr />
     </div>
 
-    <div id="numbers">
+    <div id="numbers" class="section">
       <h2>Number Methods</h2>
       <h3>Note: if the argument is not a number, NaN (not a number) will be returned.</h3>
       <h3>Examples: <code class="example">n = myNumber.toString();</code> <code class="example">dob = Number(userInput)</code>
@@ -96,7 +98,29 @@
       <p><code>Number.isInteger(num)</code> returns true if the argument is an integer.</p>
       <hr />
     </div>
-    <div id="arrays">
+
+    <div id="loops" class="section">
+      <h2>Loops</h2>
+      <h4>Loops using <code>for</code> iterate a set number of times using a counter</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example (array): <code class="example">for (let i = 0; i &lt; myArray.length; i++) { console.log(myArray[i]) }</code></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example (reverse): <code class="example">for (let i = 3; i &gt;= 0; i--) { console.log(i) }</code></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example (nested): <code class="example">for (let i = 0; i &lt; myArray.length; i++) { for (let j = 0; j &lt; yourArray.length; j++) { myFunction(myArray[i], yourArray[j]) } }</code></p>
+      <h4>Loops using <code>while</code> iterate until a condition is met</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">while (num !== 3) { num = Math.floor(Math.random() * 10) }</code></p>
+      <h4>Loops using <code>do</code> ... <code>while</code> iterate at least once</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">do { x = x + i; console.log(x); i++ } while (i &lt; 5);</code></p>
+      <h4>Loops using <code>for</code> ... <code> of</code> iterate through elements of an array or characters of a string</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">for (const num of numArray) { console.log(num) }</code></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">for (const char of myString) { console.log(char) } </code></p>
+      <h4>Loops using <code>for</code> ... <code> in</code> iterate through keys of an object</h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">for (let key in myObject) { console.log(`${key}: ${myObject[key]}`) }</code></p>
+      <h4>The <code>break</code> keyword can be used to get out of a loop</p></h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">if (myArray[i] === 'stop') { break }</code></p>
+      <h4>The <code>continue</code> keyword can be used to skip to the next iteration</p></h4>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">if (myArray[i] === 'next') { continue }</code></p>
+    </div>
+
+    <div id="arrays" class="section">
       <h2>Array Methods</h2>
       <h4>Array Methods tbat converts an Array to a String (or vice-versa)</h4>
       <p><code>.toString()</code> converts the array to a string.</p>
@@ -140,11 +164,23 @@
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">smallNum = myNumbers.every(num => { return num &lt; 10 })</code></p>
       <p><code>.some(myFunction)</code> returns true if some of the values pass the test.</p>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">smallNum = myNumbers.some(num => { return num &lt; 10 })</code></p>
-
     </div>
 
+    <div id="objects" class="section">
+      <h2>Objects</h2>
+      <p>An object is a built-in data type for storing key-value pairs.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">const myObject = { keyOne: 'valueOne', keyTwo: 'valueTwo' }</code></p>
+      <p>Either <code>.</code> or <code>[key]</code> is used to access or change the value of a key-value pair or add a new one.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Examples: <code class="example">myObject.keyThree = 'new value';</code> <code class="example">console.log(myObject[keyOne]);</code></p>
+      <p>The keyword <code>delete</code> deletes both the key and the value.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">delete myObject[keyTwo]</code></p>
+      <p>Object methods are property values that are functions.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">const myObject = { methodOne() { console.log('message')} }</code></p>
+      <p>Destructuring assignment is used to extract object properties into variables.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example">let {keyOne, keyTwo, keyThree} = myObject;</code></p>
+    </div>
   </main>
-
+<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example: <code class="example"></code></p> -->
   <footer>
     <h5>Annie McMahon 2023</h5>
   </footer>
