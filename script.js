@@ -106,13 +106,19 @@ function classExample() {
     get jobs() {
       return this._jobs;
     }
-    addJob(newJob) {
-      this.jobs.push(newJob);
+    set newJob(job) {
+      this._jobs.push(job);
+    }
+    printJobs() {
+      console.log(this.jobs);
     }
   }
   const mrSmith = new Admin('Smith', ['AP', 'AR']);
   mrSmith.takeVac(5);
-  mrSmith.addJob('Payroll');
+  mrSmith.newJob = 'Payroll';
+  mrSmith.printJobs();
+
   let code = Employee.generatePasscode();
   console.log(`Your passcode is ${code}`);
+  console.log(mrSmith);
 }
