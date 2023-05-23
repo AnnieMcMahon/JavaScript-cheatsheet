@@ -15,3 +15,41 @@ function boredom() {
     document.getElementById("bored").title = "Wow, you must be really bored!";
   }
 }
+
+function classExample() {
+  class Employee {
+    constructor(name) {
+      this._name = name;
+      this._vacDays = 20;
+    }
+    get name() {
+      return this._name;
+    }
+    get vacDays() {
+      return this._vacDays;
+    }
+    takeVac(daysOff) {
+      this._vacDays -= daysOff;
+    }
+    static generatePasscode() {
+      return Math.floor(Math.random() * 10000)
+    }
+  }
+  class Admin extends Employee {
+    constructor(name, jobs) {
+      super(name);
+      this._jobs = jobs;
+    }
+    get jobs() {
+      return this._jobs;
+    }
+    addJob(newJob) {
+      this.jobs.push(newJob);
+    }
+  }
+  const mrSmith = new Admin('Smith', ['AP', 'AR']);
+  mrSmith.takeVac(5);
+  mrSmith.addJob('Payroll');
+  let code = Employee.generatePasscode();
+  console.log(`Your passcode is ${code}`);
+}

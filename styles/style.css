@@ -108,6 +108,7 @@ button:hover {
 
 code {
   background-color: rgb(207, 194, 194);
+  color: rgb(35, 35, 35);
   border: 0.5px solid rgb(167, 161, 161);
   border-radius: 5px;
   padding: 2px;
@@ -132,6 +133,20 @@ footer {
 }
 
 .example {
-  background-color:rgb(249, 228, 123)
+  background-color:rgb(249, 228, 123);
+  color: rgb(39, 4, 39);
+
+}
+
+.example-block {
+  text-align: left;
+  border: none;
+  background-color: none;
+}
+
+.example-img {
+  display: block;
+  width: 85%;
+  height: auto;
 }
 
