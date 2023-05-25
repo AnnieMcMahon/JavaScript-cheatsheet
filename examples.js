@@ -104,3 +104,57 @@ function classExample() {
   console.log(`Your passcode is ${code}`);
   console.log(mrSmith);
 }
+
+//Function declaration 
+//(userName is a parameter; 'friend' is a default value)
+function welcomeMessage(userName = 'friend') {
+  console.log(`Hello, ${userName}! Nice to meet you!`);
+};
+
+//Function call ('Annie' is an argument)
+welcomeMessage('Annie');
+
+//Return statement
+function myArea(a, b) {
+  return a * b;
+};
+let myTotal = myArea(5, 4);
+
+//Helper function
+function myVolume(a, b, c) {
+  return myArea(a, b) * c;
+}
+
+//Anonymous function expression stored in a variable
+const myArea = function(a, b) {
+  return a * b;
+}
+
+//Arrow function with two parameters
+const myArea = (a, b) => {
+  return a * b;
+}
+
+//Arrow function with one parameter
+const mySquareArea = a => {
+  return a * a;
+}
+
+//Arrow function with no parameter
+const myMessage = () => {
+  console.log('Hello!');
+}
+
+//Consise arrow notations
+const myArea = (a, b) => a * b;
+const truthOrDare = choice => choice === 't' ? "truth" : "dare";
+
+
+
+
+
+
+
+
+
+

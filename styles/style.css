@@ -125,7 +125,6 @@ footer {
 #bored {
   width: 300px;
   height: auto;
-  float: right;
 }
 
 #bored:hover {
@@ -148,6 +147,23 @@ footer {
   display: block;
   width: 85%;
   height: auto;
+  margin: auto;
 }
+
+#images {
+  width: 100%;
+}
+
+#images .example-img {
+  width: 100%;
+  height: auto;
+}
+
+#modules .example-img {
+  width: 100%;
+  height: auto;
+}
+
+
 
 

@@ -15,13 +15,15 @@
     <ul>
       <li><a href="#images">Changing Images</a></li>
       <li><a href="#style">Changing Style</a></li>
-      <li><a href="#strings">String Methods</a></li>
-      <li><a href="#numbers">Number Methods</a></li>
+      <li><a href="#strings">Strings</a></li>
+      <li><a href="#numbers">Numbers</a></li>
       <li><a href="#loops">Loops</a></li>
-      <li><a href="#arrays">Array Methods</a></li>
+      <li><a href="#functions">Functions</a></li>
+      <li><a href="#arrays">Arrays</a></li>
       <li><a href="#objects">Objects</a></li>
       <li><a href="#classes">Classes</a></li>
       <li><a href="#modules">Modules</a></li>
+      <li><a href="#export">Export</a></li>
     </ul>
   </nav>
   <header>
@@ -32,12 +34,10 @@
     <div id="images" class="section">
       <h2>Changing Images</h2>
         <h3>Using JavaScript to change an image source</h3>
-        <h3>Example: <code class="example">onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'"</code></h3>
-        <br /><br />
         <button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
         <img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
         <button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
-        <img id="bored" src="images/bored.jpg" title="Click if you are bored" onclick="boredom()" >
+        <img class="example-img" src="images/example-images.png">
         <hr />
     </div>
     <div id="style">
@@ -61,7 +61,7 @@
       <hr />
     </div>
     <div id="strings" class="section">
-      <h2>String Methods</h2>
+      <h2>Strings</h2>
       <h3>Note: Strings are immutable. All string methods return a new string.</h3>
       <h3>Examples: <code class="example">l = myString.length();</code> <code class="example">s = myString.slice(0, 5);</code>
         <code class="example">user = inputData.toUpperCase();</code>
@@ -88,7 +88,7 @@
     </div>
 
     <div id="numbers" class="section">
-      <h2>Number Methods</h2>
+      <h2>Numbers</h2>
       <h3>Note: if the argument is not a number, NaN (not a number) will be returned.</h3>
       <h3>Examples: <code class="example">n = myNumber.toString();</code> <code class="example">dob = Number(userInput)</code>
         <code class="example">avg = parseFloat("3.15 average");</code>
@@ -114,8 +114,24 @@
       <hr />
     </div>
 
+    <div id="functions" class="section">
+      <h2>Functions</h2>
+      <p>A function is a reusable block of code that groups together a sequence of statements to perform a specific task.</p>
+      <p>A parameter is a variable which will be assigned the value of the argument passed in when the function is called.</p>
+      <p>Default parameters allow us to assign a default value to a parameter in case no argument is passed into the function.</p>
+      <p>To return a value from a function, we use a return statement.</p>
+      <p>A helper function is a function called by another function.</p>
+      <p>A function expression is stored in a variable.</p>
+      <p>An anonymous function is a function with no name. </p>
+      <p>The arrow function syntax is a shorter way to write functions by using the special “fat arrow” <code>() =></code> notation.</p>
+      <p>A consise arrow notation is a condensed form of an arrow function. One parameter does not need to be enclosed in parentheses, but no parameter or more than one will need parentheses. If the function's body has a single-line block, it does not need curly braces and the return keyword can be omitted (implicit return).</p>
+      <img class="example-img" src="images/example-functions.png">
+      <hr />
+    </div>
+
+
     <div id="arrays" class="section">
-      <h2>Array Methods</h2>
+      <h2>Arrays</h2>
       <h4>Array Methods tbat converts an Array to a String (or vice-versa)</h4>
       <p><code>.toString()</code> converts the array to a string.</p>
       <p><code>.join(" ")</code> converts the array to a string separated by the character(s) specified.</p>
@@ -189,20 +205,34 @@
 
     <div id="modules" class="section">
       <h2>Modules</h2>
+      <h3>Implementing modules in the browser</h3>
+      <button id="turn-on-off">Turn on the light</button>
+      <br /><br />
+      <img id="lightbulb" src="images/pic_bulboff.gif" style="width:100px">
+      <script src="./lightOn.js"></script>
+      <img class="example-img" src="images/example-module.png">
+      <img class="example-img" src="images/example-module-js.png">
+      <br /><br />
+      <h3>Click the picture if you are bored</h3>
+      <img id="bored" src="images/bored.jpg" title="Click if you are bored" onclick="boredom()" >
+      <br />
+      <img class="example-img" src="images/example-module-img.png">
+      <img class="example-img" src="images/example-module-img-js.png">
+      <hr />
+      </div>
+      <div id="export" class="section">
+        <h2>Exporting Modules</h2>
       <p>Each of the two JavaScript runtime environments has a preferred module implementation:</p>
         <p> &nbsp; &nbsp; - With the browser: use ES6 <code>import</code> and <code>export</code></p>
         <p> &nbsp; &nbsp; - With Node: use <code>module.exports</code> and <code>require()</code></p>
+        <p>There are many ways of exporting modules:</p>
+        <h3>Named exports</h3>
+        <img src="images/example-named-export.png" class="example-img">
+        
+
         <img src="images/example-exports.png" class="example-img">
         <img src="images/example-imports.png" class="example-img">
-
-        <h3>Implementing modules in the browser</h3>
-        <button id="turn-on-off">Turn on the light</button>
-        <br /><br />
-        <img id="lightbulb" src="images/pic_bulboff.gif" style="width:100px">
-        <script src="./lightOn.js"></script>
-        <img class="example-img" src="images/example-module.png">
-        <img class="example-img" src="images/example-module-js.png">
-        <hr />
+       <hr />
     </div>
   </main>
   <footer>

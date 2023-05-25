@@ -16,3 +16,4 @@ function boredom() {
   }
 }
 
+export { resetAll, boredom };
