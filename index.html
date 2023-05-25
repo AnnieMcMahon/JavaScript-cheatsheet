@@ -23,7 +23,6 @@
       <li><a href="#objects">Objects</a></li>
       <li><a href="#classes">Classes</a></li>
       <li><a href="#modules">Modules</a></li>
-      <li><a href="#export">Export</a></li>
     </ul>
   </nav>
   <header>
@@ -33,7 +32,7 @@
   <main>
     <div id="images" class="section">
       <h2>Changing Images</h2>
-        <h3>Using JavaScript to change an image source</h3>
+        <h3>Using <code>onclick</code> in HTML to change an image source</h3>
         <button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
         <img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
         <button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
@@ -42,7 +41,7 @@
     </div>
     <div id="style">
       <h2>Changing Style</h2>
-      <h3 id="demo">Using JavaScript to style an HTML element</h3>
+      <h3 id="demo">Using <code>onclick</code> in HTML to style an HTML element</h3>
       <h3>Example: <code class="example">onclick="document.getElementById('demo').style.visibility='hidden'"</code></h3><br /><br />
       <button type="button"
         onclick="document.getElementById('demo').style.visibility='hidden'">visibility='hidden'</button>
@@ -205,6 +204,10 @@
 
     <div id="modules" class="section">
       <h2>Modules</h2>
+      <p>Each of the two JavaScript runtime environments has a preferred module implementation:</p>
+      <p> &nbsp; &nbsp; - With the browser: use ES6 <code>import</code> and <code>export</code></p>
+      <p> &nbsp; &nbsp; - With Node: use <code>module.exports</code> and <code>require()</code></p>
+
       <h3>Implementing modules in the browser</h3>
       <button id="turn-on-off">Turn on the light</button>
       <br /><br />
@@ -220,16 +223,25 @@
       <img class="example-img" src="images/example-module-img-js.png">
       <hr />
       </div>
-      <div id="export" class="section">
-        <h2>Exporting Modules</h2>
-      <p>Each of the two JavaScript runtime environments has a preferred module implementation:</p>
-        <p> &nbsp; &nbsp; - With the browser: use ES6 <code>import</code> and <code>export</code></p>
-        <p> &nbsp; &nbsp; - With Node: use <code>module.exports</code> and <code>require()</code></p>
-        <p>There are many ways of exporting modules:</p>
-        <h3>Named exports</h3>
+      <div class="section">
+        <h3>Exporting Modules</h3>
+        <h4>Named exports (using function declaration syntax)</h4>
         <img src="images/example-named-export.png" class="example-img">
-        
+        <h4>Inline named exports (using arrow function syntax)</h4>
+        <img src="images/example-inline-named-export.png" class="example-img">
+        <h4>Default exports</h4>
+        <img src="images/example-default-export.png" class="example-img">
 
+        <h3>Importing Modules</h3>
+        <h4>Named imports (used with named exports or inline named exports)</h4>
+        <img src="images/example-named-import.png" class="example-img">
+        <h4>Default imports</h4>
+        <img src="images/example-default-import.png" class="example-img">
+        <h4>Renamed imports</h4>
+        <img src="images/example-rename-import.png" class="example-img">
+        <h4>Importing a module in HTML using <code>type="module"</code></h4>
+        <img src="images/example-html-import.png" class="example-img">
+        <h3>Summary</h3>
         <img src="images/example-exports.png" class="example-img">
         <img src="images/example-imports.png" class="example-img">
        <hr />

@@ -155,6 +155,3 @@ const truthOrDare = choice => choice === 't' ? "truth" : "dare";
 
 
 
-
-
-
